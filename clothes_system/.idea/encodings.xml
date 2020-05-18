@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8" addBOMForNewFiles="with NO BOM">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mailserver" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/vhrserver" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/vhrserver/vhr-mapper" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/vhrserver/vhr-model" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/vhrserver/vhr-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/vhrserver/vhr-web" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

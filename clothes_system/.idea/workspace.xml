@@ -1,0 +1,1236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2499ba53-2f94-4fd7-8f2b-27831fa96a51" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/vhrserver/vhr-service/target/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/vhrserver/vhr-web/target/" />
+    <ignored path="$PROJECT_DIR$/vhrserver/target/" />
+    <ignored path="$PROJECT_DIR$/vhrserver/vhr-mapper/target/" />
+    <ignored path="$PROJECT_DIR$/mailserver/target/" />
+    <ignored path="$PROJECT_DIR$/vhrserver/vhr-model/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-900771916">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.opened" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="2" />
+          <entry key="xml" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="2" />
+          <entry key="XML" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="5" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="5" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vhrserver/vhr-web/src/main/java/org/javaboy/vhr/VhrApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+              <folding>
+                <element signature="e#505#506#0" expanded="true" />
+                <element signature="e#570#571#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vhrserver/vhr-web/src/main/java/org/javaboy/vhr/controller/clothes/ClothesCOntroller.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="126" column="14" selection-start-line="126" selection-start-column="14" selection-end-line="126" selection-end-column="14" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2785#2786#0" expanded="true" />
+                <element signature="e#2841#2842#0" expanded="true" />
+                <element signature="e#3530#3531#0" expanded="true" />
+                <element signature="e#3582#3583#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/vhrserver/vhr-web/src/main/java/org/javaboy/vhr/controller/LoginController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="276">
+              <caret line="29" column="46" selection-start-line="29" selection-start-column="46" selection-end-line="29" selection-end-column="46" />
+              <folding>
+                <element signature="e#512#513#0" expanded="true" />
+                <element signature="e#562#563#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vhrserver/vhr-mapper/src/main/java/org/javaboy/vhr/mapper/HrMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vhrserver/vhr-service/src/main/java/org/javaboy/vhr/service/HrService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="98" column="1" selection-start-line="98" selection-start-column="1" selection-end-line="98" selection-end-column="1" />
+              <folding>
+                <element signature="e#1369#1370#0" expanded="true" />
+                <element signature="e#1452#1453#0" expanded="true" />
+                <element signature="e#1490#1491#0" expanded="true" />
+                <element signature="e#1553#1554#0" expanded="true" />
+                <element signature="e#1795#1796#0" expanded="true" />
+                <element signature="e#1849#1850#0" expanded="true" />
+                <element signature="e#2647#2648#0" expanded="true" />
+                <element signature="e#2702#2703#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vhrserver/vhr-model/src/main/java/org/javaboy/vhr/model/Hr.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="100" selection-start-line="100" selection-end-line="100" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vhrserver/vhr-web/src/main/java/org/javaboy/vhr/controller/HrInfoController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="80" column="1" selection-start-line="80" selection-start-column="1" selection-end-line="80" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.9.RELEASE/spring-web-5.1.9.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="198" selection-start-line="198" selection-end-line="198" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.1.6.RELEASE/spring-security-core-5.1.6.RELEASE-sources.jar!/org/springframework/security/crypto/bcrypt/BCryptPasswordEncoder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>insertCus</find>
+      <find>member_num</find>
+      <find>member_numselectMemberById</find>
+      <find>selectMemberById</find>
+      <find>listEmployee</find>
+      <find>selectPrice</find>
+      <find>r</find>
+      <find>p</find>
+      <find>listMemberType</find>
+      <find>member_id</find>
+      <find>order</find>
+      <find>recharge_acount</find>
+      <find>Sim</find>
+      <find>amqp</find>
+      <find>listTcCount</find>
+      <find>listMembers</find>
+      <find>listRecord</find>
+      <find>listTopUp</find>
+      <find>listClothesPro</find>
+      <find>insertMember</find>
+      <find>insertClothes</find>
+      <find>insertNomemClothes</find>
+      <find>updateClothes</find>
+      <find>alipay</find>
+      <find>findMemberByPhone</find>
+      <find>listClothes</find>
+      <find>selectCustomer</find>
+      <find>joblevel</find>
+      <find>hr</find>
+      <find>isEnabled</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/vhrserver/vhr-mapper/src/main/java/org/javaboy/vhr/mapper/MsgContentMapper.xml" />
+        <option value="$PROJECT_DIR$/vhrserver/vhr-web/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/vhrserver/vhr-service/src/main/java/org/javaboy/vhr/service/EmailServiceImpl.java" />
+        <option value="$PROJECT_DIR$/vhrserver/vhr-service/src/main/java/org/javaboy/vhr/service/EmailService.java" />
+        <option value="$PROJECT_DIR$/vhrserver/vhr-web/src/main/java/org/javaboy/vhr/controller/EmailController.java" />
+        <option value="$PROJECT_DIR$/vhrserver/vhr-model/src/main/java/org/javaboy/vhr/model/ClothesDetail.java" />
+        <option value="$PROJECT_DIR$/vhrserver/vhr-mapper/src/main/java/org/javaboy/vhr/mapper/TakeClothesMapper.xml" />
+        <option value="$PROJECT_DIR$/vhrserver/vhr-mapper/src/main/java/org/javaboy/vhr/mapper/TakeClothesMapper.java" />
+        <option value="$PROJECT_DIR$/vhrserver/vhr-mapper/src/main/java/org/javaboy/vhr/mapper/TurnoverMapper.java" />
+        <option value="$PROJECT_DIR$/vhrserver/vhr-mapper/src/main/java/org/javaboy/vhr/mapper/TurnoverMapper.xml" />
+        <option value="$PROJECT_DIR$/vhrserver/vhr-mapper/src/main/resources/generatorConfig.xml" />
+        <option value="$PROJECT_DIR$/vhrserver/vhr-mapper/src/main/java/org/javaboy/vhr/mapper/RewashCountMapper.java" />
+        <option value="$PROJECT_DIR$/vhrserver/vhr-mapper/src/main/java/org/javaboy/vhr/mapper/RefoundCountMapper.java" />
+        <option value="$PROJECT_DIR$/vhrserver/vhr-mapper/src/main/java/org/javaboy/vhr/mapper/RefoundCountMapper.xml" />
+        <option value="$PROJECT_DIR$/vhrserver/vhr-mapper/src/main/java/org/javaboy/vhr/mapper/RewashCountMapper.xml" />
+        <option value="$PROJECT_DIR$/vhrserver/vhr-mapper/src/main/java/org/javaboy/vhr/mapper/clothesCountMapper.xml" />
+        <option value="$PROJECT_DIR$/vhrserver/vhr-mapper/src/main/java/org/javaboy/vhr/mapper/clothesCountMapper.java" />
+        <option value="$PROJECT_DIR$/vhrserver/vhr-mapper/src/main/java/org/javaboy/vhr/mapper/TakeClothesCountMapper.java" />
+        <option value="$PROJECT_DIR$/vhrserver/vhr-mapper/src/main/java/org/javaboy/vhr/mapper/TakeClothesCountMapper.xml" />
+        <option value="$PROJECT_DIR$/vhrserver/vhr-service/src/main/java/org/javaboy/vhr/service/ClothesCountService.java" />
+        <option value="$PROJECT_DIR$/vhrserver/vhr-web/src/main/java/org/javaboy/vhr/controller/clothes/ClothesCountController.java" />
+        <option value="$PROJECT_DIR$/vhrserver/vhr-mapper/src/main/java/org/javaboy/vhr/mapper/MemberMapper.java" />
+        <option value="$PROJECT_DIR$/vhrserver/vhr-mapper/src/main/java/org/javaboy/vhr/mapper/ClothesMapper.java" />
+        <option value="$PROJECT_DIR$/vhrserver/vhr-mapper/src/main/java/org/javaboy/vhr/mapper/RecordMapper.java" />
+        <option value="$PROJECT_DIR$/vhrserver/vhr-service/src/main/java/org/javaboy/vhr/service/RecordService.java" />
+        <option value="$PROJECT_DIR$/vhrserver/vhr-mapper/src/main/java/org/javaboy/vhr/mapper/TopupMapper.java" />
+        <option value="$PROJECT_DIR$/vhrserver/vhr-model/src/main/java/org/javaboy/vhr/model/Clothes.java" />
+        <option value="$PROJECT_DIR$/vhrserver/vhr-model/src/main/java/org/javaboy/vhr/model/Member.java" />
+        <option value="$PROJECT_DIR$/vhrserver/vhr-model/src/main/java/org/javaboy/vhr/model/Record.java" />
+        <option value="$PROJECT_DIR$/vhrserver/vhr-model/src/main/java/org/javaboy/vhr/model/Topup.java" />
+        <option value="$PROJECT_DIR$/vhrserver/vhr-service/src/main/java/org/javaboy/vhr/service/MemberService.java" />
+        <option value="$PROJECT_DIR$/vhrserver/vhr-mapper/src/main/java/org/javaboy/vhr/mapper/ClothesMapper.xml" />
+        <option value="$PROJECT_DIR$/vhrserver/vhr-mapper/src/main/java/org/javaboy/vhr/mapper/RecordMapper.xml" />
+        <option value="$PROJECT_DIR$/vhrserver/vhr-web/src/main/java/org/javaboy/vhr/controller/pay/PayService.java" />
+        <option value="$PROJECT_DIR$/vhrserver/vhr-mapper/src/main/java/org/javaboy/vhr/mapper/TopupMapper.xml" />
+        <option value="$PROJECT_DIR$/vhrserver/vhr-service/src/main/java/org/javaboy/vhr/service/ClothesService.java" />
+        <option value="$PROJECT_DIR$/vhrserver/vhr-mapper/src/main/java/org/javaboy/vhr/mapper/MemberMapper.xml" />
+        <option value="$PROJECT_DIR$/vhrserver/vhr-model/src/main/java/org/javaboy/vhr/utils/PriceUtil.java" />
+        <option value="$PROJECT_DIR$/mailserver/pom.xml" />
+        <option value="$PROJECT_DIR$/vhrserver/pom.xml" />
+        <option value="$PROJECT_DIR$/vhrserver/vhr-web/pom.xml" />
+        <option value="$PROJECT_DIR$/vhrserver/vhr-model/pom.xml" />
+        <option value="$PROJECT_DIR$/vhrserver/vhr-mapper/pom.xml" />
+        <option value="$PROJECT_DIR$/vhrserver/vhr-service/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/vhrserver/vhr-web/src/main/java/org/javaboy/vhr/VhrApplication.java" />
+        <option value="$PROJECT_DIR$/vhrserver/vhr-model/src/main/java/org/javaboy/vhr/model/Hr.java" />
+        <option value="$PROJECT_DIR$/vhrserver/vhr-mapper/src/main/java/org/javaboy/vhr/mapper/HrMapper.xml" />
+        <option value="$PROJECT_DIR$/vhrserver/vhr-service/src/main/java/org/javaboy/vhr/service/HrService.java" />
+        <option value="$PROJECT_DIR$/vhrserver/vhr-web/src/main/java/org/javaboy/vhr/controller/HrInfoController.java" />
+        <option value="$PROJECT_DIR$/vhrserver/vhr-web/src/main/java/org/javaboy/vhr/controller/LoginController.java" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="G:\Maven\repository" />
+        <option name="mavenHome" value="G:/Maven/apache-maven-3.6.0" />
+        <option name="userSettingsFile" value="G:\Maven\apache-maven-3.6.0\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="downloadDocsAutomatically" value="true" />
+        <option name="downloadSourcesAutomatically" value="true" />
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="vhr" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="vhr" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="vhr-mapper" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="vhr-mapper" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="1.8 (2)" />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="175" />
+    <option name="width" value="1750" />
+    <option name="height" value="980" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="vhr" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vhr" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vhr" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vhr" type="462c0819:PsiDirectoryNode" />
+              <item name="vhrserver" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vhr" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vhr" type="462c0819:PsiDirectoryNode" />
+              <item name="vhrserver" type="462c0819:PsiDirectoryNode" />
+              <item name="vhr-web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vhr" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vhr" type="462c0819:PsiDirectoryNode" />
+              <item name="vhrserver" type="462c0819:PsiDirectoryNode" />
+              <item name="vhr-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vhr" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vhr" type="462c0819:PsiDirectoryNode" />
+              <item name="vhrserver" type="462c0819:PsiDirectoryNode" />
+              <item name="vhr-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vhr" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vhr" type="462c0819:PsiDirectoryNode" />
+              <item name="vhrserver" type="462c0819:PsiDirectoryNode" />
+              <item name="vhr-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vhr" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vhr" type="462c0819:PsiDirectoryNode" />
+              <item name="vhrserver" type="462c0819:PsiDirectoryNode" />
+              <item name="vhr-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vhr" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vhr" type="462c0819:PsiDirectoryNode" />
+              <item name="vhrserver" type="462c0819:PsiDirectoryNode" />
+              <item name="vhr-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="javaboy" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vhr" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vhr" type="462c0819:PsiDirectoryNode" />
+              <item name="vhrserver" type="462c0819:PsiDirectoryNode" />
+              <item name="vhr-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="javaboy" type="462c0819:PsiDirectoryNode" />
+              <item name="vhr" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vhr" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vhr" type="462c0819:PsiDirectoryNode" />
+              <item name="vhrserver" type="462c0819:PsiDirectoryNode" />
+              <item name="vhr-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="javaboy" type="462c0819:PsiDirectoryNode" />
+              <item name="vhr" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="MyBatisLogPluginindexNum" value="6129" />
+    <property name="MyBatisLogPluginparameters" value="Parameters:" />
+    <property name="MyBatisLogPluginpreparing" value="Preparing:" />
+    <property name="MyBatisLogPluginrunning" value="true" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1589016908827" />
+    <property name="last_opened_file_path" value="D:/workplace1/monitoring_system" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.javaboy.vhr.model" />
+      <recent name="org.javaboy.vhr.service" />
+      <recent name="org.javaboy.vhr.controller" />
+      <recent name="org.javaboy.vhr.controller.pay" />
+      <recent name="org.javaboy.vhr.util" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\gitdown\vhr-master\vhr\vhrserver\vhr-model\src\main\java\org\javaboy\vhr\model" />
+      <recent name="G:\gitdown\vhr-master\vhr\vhrserver\vhr-service\src\main\java\org\javaboy\vhr\service" />
+      <recent name="G:\gitdown\vhr-master\vhr\vhrserver\vhr-mapper\src\main\java\org\javaboy\vhr\mapper" />
+      <recent name="G:\gitdown\vhr-master\vhr\vhrserver\vhr-web\src\main\java\org\javaboy\vhr\controller\clothes" />
+      <recent name="G:\gitdown\vhr-master\vhr\vhrserver\vhr-web\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.VhrApplication">
+    <configuration name="VhrApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.javaboy.vhr.VhrApplication" />
+      <module name="vhr-web" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.javaboy.vhr.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MailserverApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="mailserver" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.javaboy.mailserver.MailserverApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VhrApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="vhr-web" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.javaboy.vhr.VhrApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.MailserverApplication" />
+      <item itemvalue="Spring Boot.VhrApplication" />
+      <item itemvalue="Application.VhrApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.VhrApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\Administrator\AppData\Roaming\Subversion</configuration>
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2499ba53-2f94-4fd7-8f2b-27831fa96a51" name="Default Changelist" comment="" />
+      <created>1584977087142</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1584977087142</updated>
+      <workItem from="1584977088771" duration="306000" />
+      <workItem from="1585008561041" duration="5372000" />
+      <workItem from="1585053365163" duration="4671000" />
+      <workItem from="1585095468426" duration="6351000" />
+      <workItem from="1585181345782" duration="10286000" />
+      <workItem from="1585267662425" duration="33338000" />
+      <workItem from="1585368777855" duration="17196000" />
+      <workItem from="1585527068705" duration="30037000" />
+      <workItem from="1585613322172" duration="26791000" />
+      <workItem from="1585700151794" duration="5957000" />
+      <workItem from="1585787018290" duration="14680000" />
+      <workItem from="1585873173969" duration="6855000" />
+      <workItem from="1586218761507" duration="30199000" />
+      <workItem from="1586306506222" duration="1996000" />
+      <workItem from="1586769560175" duration="2507000" />
+      <workItem from="1586824045937" duration="1412000" />
+      <workItem from="1586851790420" duration="181000" />
+      <workItem from="1586868330576" duration="1220000" />
+      <workItem from="1586910747109" duration="732000" />
+      <workItem from="1586945694312" duration="6292000" />
+      <workItem from="1586963676325" duration="354000" />
+      <workItem from="1587029399708" duration="4614000" />
+      <workItem from="1587083210755" duration="218000" />
+      <workItem from="1587135883818" duration="152000" />
+      <workItem from="1587189465270" duration="16030000" />
+      <workItem from="1587266830769" duration="8512000" />
+      <workItem from="1587340665360" duration="2152000" />
+      <workItem from="1587371269303" duration="8983000" />
+      <workItem from="1587428437994" duration="29116000" />
+      <workItem from="1587548032539" duration="8287000" />
+      <workItem from="1587600936703" duration="21003000" />
+      <workItem from="1587687639849" duration="18933000" />
+      <workItem from="1587816939076" duration="5592000" />
+      <workItem from="1587859860605" duration="594000" />
+      <workItem from="1587861441143" duration="19905000" />
+      <workItem from="1587904821048" duration="917000" />
+      <workItem from="1587948756847" duration="1534000" />
+      <workItem from="1587951414978" duration="6551000" />
+      <workItem from="1587970909122" duration="150000" />
+      <workItem from="1589016350677" duration="782000" />
+      <workItem from="1589167524327" duration="1607000" />
+      <workItem from="1589189842652" duration="643000" />
+      <workItem from="1589245740329" duration="230000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="363238000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49541286" visible="true" weight="0.010796221" />
+      <window_info id="Structure" order="1" sideWeight="0.5045872" side_tool="true" weight="0.4048583" />
+      <window_info id="Designer" order="2" />
+      <window_info id="JRebel" order="3" sideWeight="0.5016234" side_tool="true" weight="0.35222673" />
+      <window_info id="Image Layers" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="UI Designer" order="6" />
+      <window_info id="Favorites" order="7" side_tool="true" />
+      <window_info id="Web" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3292683" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.764526" />
+      <window_info anchor="bottom" id="TODO" order="3" weight="0.058103975" />
+      <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.49932525" weight="0.3583461" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="Spring" order="7" weight="0.7012195" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3292683" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5006748" side_tool="true" weight="0.2159265" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.3292683" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="13" show_stripe_button="false" />
+      <window_info anchor="bottom" id="JRebel Console" order="14" side_tool="true" />
+      <window_info anchor="bottom" id="JRebel Executor" order="15" />
+      <window_info anchor="bottom" id="Messages" order="16" weight="0.058103975" />
+      <window_info anchor="bottom" id="MyBatis Log" order="17" weight="0.07317073" />
+      <window_info anchor="bottom" id="Analysis" order="18" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24966262" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" sideWeight="0.49772727" weight="0.25775978" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Word Book" order="6" sideWeight="0.5022727" side_tool="true" weight="0.3299595" />
+      <window_info anchor="right" id="Database" order="7" sideWeight="0.49772727" weight="0.096491225" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
+      <window_info anchor="right" id="SciView" order="10" weight="0.3299595" />
+      <window_info anchor="right" id="Bean Validation" order="11" />
+      <window_info anchor="right" id="Codota" order="12" />
+      <window_info anchor="right" id="Key Promoter X" order="13" />
+      <window_info anchor="right" id="Maven Projects" order="14" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11336032" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="JRebel" order="3" side_tool="true" />
+      <window_info id="Image Layers" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="UI Designer" order="6" />
+      <window_info id="Favorites" order="7" side_tool="true" />
+      <window_info id="Web" order="8" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3307927" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.05792683" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3292683" />
+      <window_info anchor="bottom" id="Spring" order="7" weight="0.7012195" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3292683" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.3292683" />
+      <window_info anchor="bottom" id="Database Changes" order="12" />
+      <window_info anchor="bottom" id="Version Control" order="13" />
+      <window_info anchor="bottom" id="JRebel Console" order="14" side_tool="true" />
+      <window_info anchor="bottom" id="JRebel Executor" order="15" />
+      <window_info active="true" anchor="bottom" id="Messages" order="16" visible="true" weight="0.05792683" />
+      <window_info anchor="bottom" id="MyBatis Log" order="17" weight="0.05792683" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" sideWeight="0.49772727" weight="0.2462888" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Word Book" order="6" sideWeight="0.5022727" side_tool="true" weight="0.3299595" />
+      <window_info anchor="right" id="Database" order="7" sideWeight="0.49772727" weight="0.096491225" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
+      <window_info anchor="right" id="SciView" order="10" />
+      <window_info anchor="right" id="Bean Validation" order="11" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/vhrserver/vhr-web/src/main/java/org/javaboy/vhr/controller/emp/EmpBasicController.java</url>
+          <line>158</line>
+          <properties />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/vhrserver/vhr-web/src/main/java/org/javaboy/vhr/controller/customerController/CustomerController.java</url>
+          <line>45</line>
+          <properties />
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/vhrserver/vhr-web/src/main/java/org/javaboy/vhr/controller/member/MemberController.java</url>
+          <line>56</line>
+          <properties />
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/vhrserver/vhr-service/src/main/java/org/javaboy/vhr/service/CustomerService.java</url>
+          <line>41</line>
+          <properties />
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/vhrserver/vhr-service/src/main/java/org/javaboy/vhr/service/ClothesService.java</url>
+          <line>100</line>
+          <properties />
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/vhrserver/vhr-service/src/main/java/org/javaboy/vhr/service/ClothesService.java</url>
+          <line>121</line>
+          <properties />
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/vhrserver/vhr-web/src/main/java/org/javaboy/vhr/controller/EmailController.java</url>
+          <line>21</line>
+          <properties />
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/vhrserver/vhr-mapper/src/main/java/org/javaboy/vhr/mapper/clothesCountMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="497">
+          <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vhrserver/vhr-mapper/src/main/java/org/javaboy/vhr/mapper/clothesCountMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vhrserver/vhr-mapper/src/main/java/org/javaboy/vhr/mapper/TakeClothesCountMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="28" column="17" lean-forward="true" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vhrserver/vhr-mapper/src/main/java/org/javaboy/vhr/mapper/TakeClothesCountMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="10" column="27" lean-forward="true" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vhrserver/vhr-model/src/main/java/org/javaboy/vhr/model/TakeClothesCount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vhrserver/vhr-model/src/main/java/org/javaboy/vhr/model/cloCount.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="13" column="29" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vhrserver/vhr-web/src/main/java/org/javaboy/vhr/record/RecordController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="31" column="34" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vhrserver/vhr-service/src/main/java/org/javaboy/vhr/service/RecordService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="70" column="40" selection-start-line="70" selection-start-column="40" selection-end-line="70" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vhrserver/vhr-model/src/main/java/org/javaboy/vhr/model/Clothes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="47" column="26" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vhrserver/vhr-model/src/main/java/org/javaboy/vhr/model/Record.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vhrserver/vhr-model/src/main/java/org/javaboy/vhr/model/Topup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vhrserver/vhr-mapper/src/main/java/org/javaboy/vhr/mapper/ClothesMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vhrserver/vhr-mapper/src/main/java/org/javaboy/vhr/mapper/ClothesMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-915">
+          <caret line="115" column="4" selection-start-line="115" selection-start-column="4" selection-end-line="115" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vhrserver/vhr-model/src/main/java/org/javaboy/vhr/model/Member.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vhrserver/vhr-mapper/src/main/java/org/javaboy/vhr/mapper/RecordMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="57" column="4" selection-start-line="57" selection-start-column="4" selection-end-line="57" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vhrserver/vhr-mapper/src/main/java/org/javaboy/vhr/mapper/RecordMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vhrserver/vhr-web/src/main/java/org/javaboy/vhr/controller/pay/PayService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="64" column="28" lean-forward="true" selection-start-line="64" selection-start-column="28" selection-end-line="64" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vhrserver/vhr-mapper/src/main/java/org/javaboy/vhr/mapper/TopupMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vhrserver/vhr-mapper/src/main/java/org/javaboy/vhr/mapper/TopupMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="93" column="15" lean-forward="true" selection-start-line="93" selection-start-column="15" selection-end-line="93" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vhrserver/vhr-web/src/main/java/org/javaboy/vhr/controller/pay/OrderController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="56" selection-start-line="56" selection-end-line="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vhrserver/vhr-web/src/main/java/org/javaboy/vhr/controller/member/MemberController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="99" column="39" selection-start-line="99" selection-start-column="39" selection-end-line="99" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vhrserver/vhr-service/src/main/java/org/javaboy/vhr/service/ClothesService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2800">
+          <caret line="102" selection-start-line="102" selection-end-line="102" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mailserver/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="59" column="19" selection-start-line="59" selection-start-column="19" selection-end-line="59" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vhrserver/vhr-web/src/main/java/org/javaboy/vhr/controller/customerController/CustomerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1456">
+          <caret line="67" column="39" selection-start-line="67" selection-start-column="39" selection-end-line="67" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vhrserver/vhr-service/src/main/java/org/javaboy/vhr/service/CustomerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1484">
+          <caret line="66" column="43" selection-start-line="66" selection-start-column="43" selection-end-line="66" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vhrserver/vhr-model/src/main/java/org/javaboy/vhr/utils/PriceUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vhrserver/vhr-service/src/main/java/org/javaboy/vhr/service/MemberService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3416">
+          <caret line="137" column="53" selection-start-line="137" selection-start-column="53" selection-end-line="137" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vhrserver/vhr-mapper/src/main/java/org/javaboy/vhr/mapper/MemberMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1764">
+          <caret line="68" column="21" selection-start-line="68" selection-start-column="21" selection-end-line="68" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vhrserver/vhr-service/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2044">
+          <caret line="73" column="17" selection-start-line="73" selection-start-column="17" selection-end-line="73" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vhrserver/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="896">
+          <caret line="32" column="12" selection-start-line="20" selection-start-column="3" selection-end-line="32" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vhrserver/vhr-web/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2296">
+          <caret line="82" column="21" selection-start-line="74" selection-start-column="11" selection-end-line="82" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vhrserver/vhr-model/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1008">
+          <caret line="36" column="12" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vhrserver/vhr-mapper/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1764">
+          <caret line="63" column="40" selection-start-line="63" selection-start-column="40" selection-end-line="63" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vhrserver/vhr-mapper/src/main/java/org/javaboy/vhr/mapper/MemberMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2604">
+          <caret line="93" column="13" selection-start-line="93" selection-start-column="13" selection-end-line="93" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vhrserver/vhr-web/src/main/java/org/javaboy/vhr/controller/clothes/ClothesCountController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="35" column="41" selection-start-line="35" selection-start-column="41" selection-end-line="35" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vhrserver/vhr-service/src/main/java/org/javaboy/vhr/service/ClothesCountService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="868">
+          <caret line="39" column="26" selection-start-line="39" selection-start-column="26" selection-end-line="39" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vhrserver/vhr-web/src/main/java/org/javaboy/vhr/controller/emp/EmpBasicController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="86" column="32" lean-forward="true" selection-start-line="86" selection-start-column="32" selection-end-line="86" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vhrserver/vhr-service/src/main/java/org/javaboy/vhr/service/JobLevelService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="25" column="36" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vhrserver/vhr-mapper/src/main/java/org/javaboy/vhr/mapper/JobLevelMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vhrserver/vhr-mapper/src/main/java/org/javaboy/vhr/mapper/JobLevelMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vhrserver/vhr-mapper/src/main/java/org/javaboy/vhr/mapper/HrMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1664">
+          <caret line="64" column="4" selection-start-line="64" selection-start-column="4" selection-end-line="64" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vhrserver/vhr-web/src/main/java/org/javaboy/vhr/VhrApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+          <folding>
+            <element signature="e#505#506#0" expanded="true" />
+            <element signature="e#570#571#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vhrserver/vhr-web/src/main/java/org/javaboy/vhr/controller/clothes/ClothesCOntroller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="126" column="14" selection-start-line="126" selection-start-column="14" selection-end-line="126" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2785#2786#0" expanded="true" />
+            <element signature="e#2841#2842#0" expanded="true" />
+            <element signature="e#3530#3531#0" expanded="true" />
+            <element signature="e#3582#3583#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vhrserver/vhr-mapper/src/main/java/org/javaboy/vhr/mapper/HrMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vhrserver/vhr-service/src/main/java/org/javaboy/vhr/service/HrService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="98" column="1" selection-start-line="98" selection-start-column="1" selection-end-line="98" selection-end-column="1" />
+          <folding>
+            <element signature="e#1369#1370#0" expanded="true" />
+            <element signature="e#1452#1453#0" expanded="true" />
+            <element signature="e#1490#1491#0" expanded="true" />
+            <element signature="e#1553#1554#0" expanded="true" />
+            <element signature="e#1795#1796#0" expanded="true" />
+            <element signature="e#1849#1850#0" expanded="true" />
+            <element signature="e#2647#2648#0" expanded="true" />
+            <element signature="e#2702#2703#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vhrserver/vhr-model/src/main/java/org/javaboy/vhr/model/Hr.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="100" selection-start-line="100" selection-end-line="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vhrserver/vhr-web/src/main/java/org/javaboy/vhr/controller/HrInfoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="80" column="1" selection-start-line="80" selection-start-column="1" selection-end-line="80" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.9.RELEASE/spring-web-5.1.9.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="198" selection-start-line="198" selection-end-line="198" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.1.6.RELEASE/spring-security-core-5.1.6.RELEASE-sources.jar!/org/springframework/security/crypto/bcrypt/BCryptPasswordEncoder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="33" column="13" selection-start-line="33" selection-start-column="13" selection-end-line="33" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vhrserver/vhr-web/src/main/java/org/javaboy/vhr/controller/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="29" column="46" selection-start-line="29" selection-start-column="46" selection-end-line="29" selection-end-column="46" />
+          <folding>
+            <element signature="e#512#513#0" expanded="true" />
+            <element signature="e#562#563#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>mailserver</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8 (2)</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.19747417" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: ch.qos.logback:logback-classic:1.2.3</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

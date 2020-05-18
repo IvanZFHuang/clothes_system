@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.javaboy.vhr.mapper.RecordMapper">
+    <resultMap id="BaseResultMap" type="org.javaboy.vhr.model.Record">
+        <id column="record_id" property="recordId" jdbcType="INTEGER"/>
+        <result column="cus_id" property="cusId" jdbcType="INTEGER"/>
+        <result column="mem_id" property="memId" jdbcType="INTEGER"/>
+        <result column="record_time" property="recordTime" jdbcType="VARCHAR"/>
+        <result column="record_money" property="recordMoney" jdbcType="DOUBLE"/>
+        <result column="record_detail" property="recordDetail" jdbcType="VARCHAR"/>
+        <association property="customer" javaType="org.javaboy.vhr.model.Customer">
+            <result column="cus_name" property="cusName" jdbcType="VARCHAR"/>
+            <result column="cus_email" property="cusEmail" jdbcType="VARCHAR"/>
+            <result column="cus_address" property="cusAddress" jdbcType="VARCHAR"/>
+            <result column="cus_phone" property="cusPhone" jdbcType="VARCHAR"/>
+        </association>
+        <association property="member" javaType="org.javaboy.vhr.model.Member">
+            <result column="member_num" property="memberNum" jdbcType="VARCHAR"/>
+            <result column="balance" property="balance" jdbcType="DOUBLE"/>
+        </association>
+    </resultMap>
+    <sql id="Base_Column_List">
+    record_id, cus_id, mem_id, record_time, record_money, record_detail
+  </sql>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List"/>
+        from record
+        where record_id = #{recordId,jdbcType=INTEGER}
+    </select>
+    <!--查询所有的消费记录-->
+    <select id="listRecord" resultMap="BaseResultMap">
+        select mem.member_num, mem.balance,cus.cus_name, cus.cus_email,cus.cus_phone,r.record_id, r.cus_id,
+        r.mem_id, r.record_time, r.record_money, r.record_detail from record r join
+        members mem on mem.member_id = r.mem_id join customer cus on r.cus_id = cus.cus_id
+        <where>
+            <if test="info !=null and info != ''">
+                <bind name="info" value="'%'+info+'%'"/>
+                mem.member_num like #{info} or cus.cus_name like #{info} or cus.cus_phone like #{info}
+            </if>
+            <if test="id != null and  id != '' ">
+                and r.user_id = #{id}
+            </if>
+        </where>
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from record
+    where record_id = #{recordId,jdbcType=INTEGER}
+  </delete>
+    <insert id="insert" parameterType="org.javaboy.vhr.model.Record">
+    insert into record (record_id, cus_id, mem_id, 
+      record_time, record_money, record_detail
+      )
+    values (#{recordId,jdbcType=INTEGER}, #{cusId,jdbcType=INTEGER}, #{memId,jdbcType=INTEGER}, 
+      #{recordTime,jdbcType=VARCHAR}, #{recordMoney,jdbcType=DOUBLE}, #{recordDetail,jdbcType=VARCHAR}
+      )
+  </insert>
+    <insert id="insertSelective" parameterType="org.javaboy.vhr.model.Record">
+        insert into record
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="recordId != null">
+                record_id,
+            </if>
+            <if test="cusId != null">
+                cus_id,
+            </if>
+            <if test="memId != null">
+                mem_id,
+            </if>
+            <if test="recordTime != null">
+                record_time,
+            </if>
+            <if test="recordMoney != null">
+                record_money,
+            </if>
+            <if test="recordDetail != null">
+                record_detail,
+            </if>
+            <if test="clothesId != null">
+                clothes_id,
+            </if>
+            <if test="userId != null">
+                user_id,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="recordId != null">
+                #{recordId,jdbcType=INTEGER},
+            </if>
+            <if test="cusId != null">
+                #{cusId,jdbcType=INTEGER},
+            </if>
+            <if test="memId != null">
+                #{memId,jdbcType=INTEGER},
+            </if>
+            <if test="recordTime != null">
+                #{recordTime,jdbcType=VARCHAR},
+            </if>
+            <if test="recordMoney != null">
+                #{recordMoney,jdbcType=DOUBLE},
+            </if>
+            <if test="recordDetail != null">
+                #{recordDetail,jdbcType=VARCHAR},
+            </if>
+            <if test="clothesId != null">
+                #{clothesId,jdbcType=INTEGER},
+            </if>
+            <if test="userId != null">
+                #{userId,jdbcType=INTEGER},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="org.javaboy.vhr.model.Record">
+        update record
+        <set>
+            <if test="cusId != null">
+                cus_id = #{cusId,jdbcType=INTEGER},
+            </if>
+            <if test="memId != null">
+                mem_id = #{memId,jdbcType=INTEGER},
+            </if>
+            <if test="recordTime != null">
+                record_time = #{recordTime,jdbcType=VARCHAR},
+            </if>
+            <if test="recordMoney != null">
+                record_money = #{recordMoney,jdbcType=DOUBLE},
+            </if>
+            <if test="recordDetail != null">
+                record_detail = #{recordDetail,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where record_id = #{recordId,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="org.javaboy.vhr.model.Record">
+    update record
+    set cus_id = #{cusId,jdbcType=INTEGER},
+      mem_id = #{memId,jdbcType=INTEGER},
+      record_time = #{recordTime,jdbcType=VARCHAR},
+      record_money = #{recordMoney,jdbcType=DOUBLE},
+      record_detail = #{recordDetail,jdbcType=VARCHAR}
+    where record_id = #{recordId,jdbcType=INTEGER}
+  </update>
+</mapper>

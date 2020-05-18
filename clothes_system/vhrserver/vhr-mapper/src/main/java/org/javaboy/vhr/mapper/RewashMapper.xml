@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.javaboy.vhr.mapper.RewashMapper" >
+  <resultMap id="BaseResultMap" type="org.javaboy.vhr.model.Rewash" >
+    <id column="re_id" property="reId" jdbcType="INTEGER" />
+    <result column="clothes_id" property="clothesId" jdbcType="INTEGER" />
+    <result column="reason" property="reason" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    re_id, clothes_id, reason
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from rewash
+    where re_id = #{reId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from rewash
+    where re_id = #{reId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="org.javaboy.vhr.model.Rewash" >
+    insert into rewash (re_id, clothes_id, reason
+      )
+    values (#{reId,jdbcType=INTEGER}, #{clothesId,jdbcType=INTEGER}, #{reason,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="org.javaboy.vhr.model.Rewash" >
+    insert into rewash
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="reId != null" >
+        re_id,
+      </if>
+      <if test="clothesId != null" >
+        clothes_id,
+      </if>
+      <if test="reason != null" >
+        reason,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="reId != null" >
+        #{reId,jdbcType=INTEGER},
+      </if>
+      <if test="clothesId != null" >
+        #{clothesId,jdbcType=INTEGER},
+      </if>
+      <if test="reason != null" >
+        #{reason,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.javaboy.vhr.model.Rewash" >
+    update rewash
+    <set >
+      <if test="clothesId != null" >
+        clothes_id = #{clothesId,jdbcType=INTEGER},
+      </if>
+      <if test="reason != null" >
+        reason = #{reason,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where re_id = #{reId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.javaboy.vhr.model.Rewash" >
+    update rewash
+    set clothes_id = #{clothesId,jdbcType=INTEGER},
+      reason = #{reason,jdbcType=VARCHAR}
+    where re_id = #{reId,jdbcType=INTEGER}
+  </update>
+</mapper>

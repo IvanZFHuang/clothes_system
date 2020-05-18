@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.javaboy.vhr.mapper.ChangeManageMapper">
+    <resultMap id="BaseResultMap" type="org.javaboy.vhr.model.ChangeManage">
+        <id column="change_id" property="changeId" jdbcType="INTEGER"/>
+        <result column="curent_date" property="curentDate" jdbcType="VARCHAR"/>
+        <result column="work_status" property="workStatus" jdbcType="INTEGER"/>
+        <result column="over_remark" property="overRemark" jdbcType="VARCHAR"/>
+        <result column="is_over" property="isOver" jdbcType="INTEGER"/>
+        <result column="oparator_name" property="oparatorName" jdbcType="VARCHAR"/>
+        <result column="oparator_workID" property="oparatorWorkid" jdbcType="VARCHAR"/>
+        <result column="over_name" property="overName" jdbcType="VARCHAR"/>
+        <result column="over_workID" property="overWorkid" jdbcType="VARCHAR"/>
+        <result column="over_date" property="overDate" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    change_id, curent_date, work_status, over_remark, is_over, oparator_name, oparator_workID, 
+    over_name, over_workID, over_date
+  </sql>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List"/>
+        from change_manage
+        where change_id = #{changeId,jdbcType=INTEGER}
+    </select>
+    <!--查询所有的交接信息-->
+    <select id="listChangemanage" resultType="org.javaboy.vhr.model.ChangeManage">
+        select
+        <include refid="Base_Column_List"/>
+        from change_manage
+        <where>
+            <if test="currnetDate!=null and currnetDate !=''">
+                <bind name="currnetDate" value="'%'+currnetDate+'%'"/>
+                curent_date like #{currnetDate}
+            </if>
+            <if test="workId !=null and workId !=''">
+                and oparator_workID = #{workId} or over_workID = #{workId}
+            </if>
+        </where>
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from change_manage
+    where change_id = #{changeId,jdbcType=INTEGER}
+  </delete>
+    <insert id="insert" parameterType="org.javaboy.vhr.model.ChangeManage">
+    insert into change_manage (change_id, curent_date, work_status, 
+      over_remark, is_over, oparator_name, 
+      oparator_workID, over_name, over_workID, 
+      over_date)
+    values (#{changeId,jdbcType=INTEGER}, #{curentDate,jdbcType=VARCHAR}, #{workStatus,jdbcType=INTEGER}, 
+      #{overRemark,jdbcType=VARCHAR}, #{isOver,jdbcType=INTEGER}, #{oparatorName,jdbcType=VARCHAR}, 
+      #{oparatorWorkid,jdbcType=VARCHAR}, #{overName,jdbcType=VARCHAR}, #{overWorkid,jdbcType=VARCHAR}, 
+      #{overDate,jdbcType=VARCHAR})
+  </insert>
+    <insert id="insertSelective" parameterType="org.javaboy.vhr.model.ChangeManage">
+        insert into change_manage
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="changeId != null">
+                change_id,
+            </if>
+            <if test="curentDate != null">
+                curent_date,
+            </if>
+            <if test="workStatus != null">
+                work_status,
+            </if>
+            <if test="overRemark != null">
+                over_remark,
+            </if>
+            <if test="isOver != null">
+                is_over,
+            </if>
+            <if test="oparatorName != null">
+                oparator_name,
+            </if>
+            <if test="oparatorWorkid != null">
+                oparator_workID,
+            </if>
+            <if test="overName != null">
+                over_name,
+            </if>
+            <if test="overWorkid != null">
+                over_workID,
+            </if>
+            <if test="overDate != null">
+                over_date,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="changeId != null">
+                #{changeId,jdbcType=INTEGER},
+            </if>
+            <if test="curentDate != null">
+                #{curentDate,jdbcType=VARCHAR},
+            </if>
+            <if test="workStatus != null">
+                #{workStatus,jdbcType=INTEGER},
+            </if>
+            <if test="overRemark != null">
+                #{overRemark,jdbcType=VARCHAR},
+            </if>
+            <if test="isOver != null">
+                #{isOver,jdbcType=INTEGER},
+            </if>
+            <if test="oparatorName != null">
+                #{oparatorName,jdbcType=VARCHAR},
+            </if>
+            <if test="oparatorWorkid != null">
+                #{oparatorWorkid,jdbcType=VARCHAR},
+            </if>
+            <if test="overName != null">
+                #{overName,jdbcType=VARCHAR},
+            </if>
+            <if test="overWorkid != null">
+                #{overWorkid,jdbcType=VARCHAR},
+            </if>
+            <if test="overDate != null">
+                #{overDate,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="org.javaboy.vhr.model.ChangeManage">
+        update change_manage
+        <set>
+            <if test="curentDate != null">
+                curent_date = #{curentDate,jdbcType=VARCHAR},
+            </if>
+            <if test="workStatus != null">
+                work_status = #{workStatus,jdbcType=INTEGER},
+            </if>
+            <if test="overRemark != null">
+                over_remark = #{overRemark,jdbcType=VARCHAR},
+            </if>
+            <if test="isOver != null">
+                is_over = #{isOver,jdbcType=INTEGER},
+            </if>
+            <if test="oparatorName != null">
+                oparator_name = #{oparatorName,jdbcType=VARCHAR},
+            </if>
+            <if test="oparatorWorkid != null">
+                oparator_workID = #{oparatorWorkid,jdbcType=VARCHAR},
+            </if>
+            <if test="overName != null">
+                over_name = #{overName,jdbcType=VARCHAR},
+            </if>
+            <if test="overWorkid != null">
+                over_workID = #{overWorkid,jdbcType=VARCHAR},
+            </if>
+            <if test="overDate != null">
+                over_date = #{overDate,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where change_id = #{changeId,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="org.javaboy.vhr.model.ChangeManage">
+    update change_manage
+    set curent_date = #{curentDate,jdbcType=VARCHAR},
+      work_status = #{workStatus,jdbcType=INTEGER},
+      over_remark = #{overRemark,jdbcType=VARCHAR},
+      is_over = #{isOver,jdbcType=INTEGER},
+      oparator_name = #{oparatorName,jdbcType=VARCHAR},
+      oparator_workID = #{oparatorWorkid,jdbcType=VARCHAR},
+      over_name = #{overName,jdbcType=VARCHAR},
+      over_workID = #{overWorkid,jdbcType=VARCHAR},
+      over_date = #{overDate,jdbcType=VARCHAR}
+    where change_id = #{changeId,jdbcType=INTEGER}
+  </update>
+    <!--修改对接状态-->
+    <update id="updateIsOver">
+        update change_manage set  is_over = #{isOver,jdbcType=INTEGER},over_date = #{overDate} where change_id = #{changeId,jdbcType=INTEGER}
+    </update>
+</mapper>

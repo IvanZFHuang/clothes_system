@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.javaboy.vhr.mapper.TakeClothesCountMapper">
+    <resultMap id="BaseResultMap" type="org.javaboy.vhr.model.TakeClothesCount">
+        <id column="take_id" property="takeId" jdbcType="INTEGER"/>
+        <result column="take_date" property="takeDate" jdbcType="VARCHAR"/>
+        <result column="take_count" property="takeCount" jdbcType="INTEGER"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    take_id, take_date, take_count
+  </sql>
+    <select id="listTcCount" resultType="org.javaboy.vhr.model.TakeClothesCount">
+        select
+        <include refid="Base_Column_List"/>
+        from take_clothes_count
+        <where>
+            <if test="id != null and  id != ''">
+                user_id = #{id}
+            </if>
+        </where>
+    </select>
+    <select id="list" resultType="org.javaboy.vhr.model.TakeClothesCount">
+        select
+        <include refid="Base_Column_List"/>
+        from take_clothes_count
+        <where>
+            <if test="id != null and  id != ''">
+                user_id = #{id}
+            </if>
+        </where>
+        order by take_id DESC limit 4
+    </select>
+
+</mapper>

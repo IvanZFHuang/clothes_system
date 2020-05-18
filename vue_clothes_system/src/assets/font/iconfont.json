@@ -1,0 +1,23 @@
+{
+  "id": "1217994",
+  "name": "qihangkt",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "2863948",
+      "name": "特权会员",
+      "font_class": "tequanhuiyuan",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "10742356",
+      "name": "会 员1-01",
+      "font_class": "huiyuan-",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    }
+  ]
+}

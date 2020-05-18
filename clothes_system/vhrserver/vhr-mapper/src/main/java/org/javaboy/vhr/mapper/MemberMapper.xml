@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.javaboy.vhr.mapper.MemberMapper">
+    <resultMap id="BaseResultMap" type="org.javaboy.vhr.model.Member">
+        <id column="member_id" property="memberId" jdbcType="INTEGER"/>
+        <result column="member_num" property="memberNum" jdbcType="VARCHAR"/>
+        <result column="type_id" property="typeId" jdbcType="INTEGER"/>
+        <result column="custom_id" property="customId" jdbcType="INTEGER"/>
+        <result column="create_time" property="createTime" jdbcType="VARCHAR"/>
+        <result column="is_logout" property="isLogout" jdbcType="INTEGER"/>
+        <result column="balance" property="balance" jdbcType="DOUBLE"/>
+    </resultMap>
+    <resultMap id="memberInfo" type="org.javaboy.vhr.model.MemberDetailInfo" extends="BaseResultMap">
+        <association property="customer" javaType="org.javaboy.vhr.model.Customer">
+            <id column="cus_id" property="cusId" jdbcType="INTEGER"/>
+            <result column="cus_name" property="cusName" jdbcType="VARCHAR"/>
+            <result column="cus_email" property="cusEmail" jdbcType="VARCHAR"/>
+            <result column="cus_address" property="cusAddress" jdbcType="VARCHAR"/>
+            <result column="cus_phone" property="cusPhone" jdbcType="VARCHAR"/>
+        </association>
+        <association property="memberType" javaType="org.javaboy.vhr.model.MemberType">
+            <result column="type_name" property="typeName" jdbcType="VARCHAR"/>
+            <result column="discount" property="discount" jdbcType="VARCHAR"/>
+            <result column="total" property="total" jdbcType="VARCHAR"/>
+            <result column="recharge_acount" property="rechargeAcount" jdbcType="DOUBLE"/>
+        </association>
+    </resultMap>
+
+    <resultMap id="updateMember" type="org.javaboy.vhr.model.UpdateMember">
+        <id column="member_id" property="memberId" jdbcType="INTEGER"/>
+        <result column="member_num" property="memberNum" jdbcType="VARCHAR"/>
+        <result column="cus_name" property="cusName" jdbcType="VARCHAR"/>
+        <result column="cus_email" property="cusEmail" jdbcType="VARCHAR"/>
+        <result column="cus_phone" property="cusPhone" jdbcType="VARCHAR"/>
+        <result column="total" property="total" jdbcType="VARCHAR"/>
+        <result column="custom_id" property="cusId" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    member_id, member_num, type_id, custom_id, create_time, is_logout, balance
+  </sql>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List"/>
+        from members
+        where member_id = #{memberId,jdbcType=INTEGER}
+    </select>
+    <!--查询所有的会员信息-->
+    <select id="listMembers" resultMap="memberInfo">
+        select mem.member_id, mem.member_num, mem.create_time, mem.is_logout, mem.balance,mt.type_name,
+        mt.discount,mt.total,cus.cus_name, cus.cus_email, cus.cus_address, cus.cus_phone,mem.type_id,mt.recharge_acount
+        from members mem
+        join
+        member_type mt on mem.type_id = mt.type_id join customer cus
+        on mem.custom_id = cus.cus_id
+        <where>
+            <if test="info !=null and info != ''">
+                <bind name="info" value="'%'+info+'%'"/>
+                mem.member_num like #{info} or cus.cus_name like #{info} or cus.cus_phone like #{info}
+            </if>
+            <if test="id != null and id != ''">
+                and mem.user_id = #{id}
+            </if>
+
+        </where>
+    </select>
+    <!--根据id 查询会员信息-->
+    <select id="selectMember" resultMap="memberInfo">
+        select mem.member_id, mem.member_num, mem.create_time, mem.is_logout, mem.balance,mt.type_name,
+        mt.discount,mt.total,cus.cus_name, cus.cus_email, cus.cus_address, cus.cus_phone from members mem join
+        member_type mt on mem.type_id = mt.type_id join customer cus
+        on mem.custom_id = cus.cus_id where cus.cus_id=#{cusId}
+    </select>
+    <!--根据 最大的id 获取 会员号-->
+    <select id="getMemberNum" resultType="java.lang.String">
+        select member_num from members where member_id = (select max(member_id) from members)
+    </select>
+    <select id="selectMemberById" resultMap="updateMember">
+        select mem.member_id, mem.member_num, mt.total,cus.cus_name, cus.cus_email,  cus.cus_phone,mem.custom_id from members mem join
+        member_type mt on mem.type_id = mt.type_id join customer cus
+        on mem.custom_id = cus.cus_id where mem.member_id = #{id}
+    </select>
+    <select id="listMember" resultMap="memberInfo">
+        select mem.member_id, mem.member_num,  mem.balance,mt.type_name,
+        cus.cus_name, cus.cus_email, cus.cus_phone from members mem join
+        member_type mt on mem.type_id = mt.type_id join customer cus
+        on mem.custom_id = cus.cus_id
+    </select>
+    <!--根据手机号查询-->
+    <select id="selectByPhone" resultMap="memberInfo">
+        select mem.member_id, mem.member_num, mem.create_time, mem.is_logout, mem.balance,mt.type_name,mem.type_id,
+        mt.discount,mt.total,cus.cus_name, cus.cus_email, cus.cus_address,cus.cus_id, cus.cus_phone,mt.recharge_acount from members mem join
+        member_type mt on mem.type_id = mt.type_id join customer cus
+        on mem.custom_id = cus.cus_id where cus.cus_phone = #{phone}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from members
+    where member_id = #{memberId,jdbcType=INTEGER}
+  </delete>
+    <insert id="insert" parameterType="org.javaboy.vhr.model.Member">
+    insert into members (member_id, member_num, type_id,
+      custom_id, create_time, is_logout, 
+      balance)
+    values (#{memberId,jdbcType=INTEGER}, #{memberNum,jdbcType=VARCHAR}, #{typeId,jdbcType=INTEGER}, 
+      #{customId,jdbcType=INTEGER}, #{createTime,jdbcType=VARCHAR}, #{isLogout,jdbcType=INTEGER}, 
+      #{balance,jdbcType=DOUBLE})
+  </insert>
+    <insert id="insertSelective" parameterType="org.javaboy.vhr.model.Member">
+        insert into members
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="memberId != null">
+                member_id,
+            </if>
+            <if test="memberNum != null">
+                member_num,
+            </if>
+            <if test="typeId != null">
+                type_id,
+            </if>
+            <if test="customId != null">
+                custom_id,
+            </if>
+            <if test="createTime != null">
+                create_time,
+            </if>
+            <if test="isLogout != null">
+                is_logout,
+            </if>
+            <if test="balance != null">
+                balance,
+            </if>
+            <if test="userId != null">
+                user_id,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="memberId != null">
+                #{memberId,jdbcType=INTEGER},
+            </if>
+            <if test="memberNum != null">
+                #{memberNum,jdbcType=VARCHAR},
+            </if>
+            <if test="typeId != null">
+                #{typeId,jdbcType=INTEGER},
+            </if>
+            <if test="customId != null">
+                #{customId,jdbcType=INTEGER},
+            </if>
+            <if test="createTime != null">
+                #{createTime,jdbcType=VARCHAR},
+            </if>
+            <if test="isLogout != null">
+                #{isLogout,jdbcType=INTEGER},
+            </if>
+            <if test="balance != null">
+                #{balance,jdbcType=DOUBLE},
+            </if>
+            <if test="userId != null">
+                #{userId,jdbcType=INTEGER}
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="org.javaboy.vhr.model.Member">
+        update members
+        <set>
+            <if test="memberNum != null">
+                member_num = #{memberNum,jdbcType=VARCHAR},
+            </if>
+            <if test="typeId != null">
+                type_id = #{typeId,jdbcType=INTEGER},
+            </if>
+            <if test="customId != null">
+                custom_id = #{customId,jdbcType=INTEGER},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime,jdbcType=VARCHAR},
+            </if>
+            <if test="isLogout != null">
+                is_logout = #{isLogout,jdbcType=INTEGER},
+            </if>
+            <if test="balance != null">
+                balance = #{balance,jdbcType=DOUBLE},
+            </if>
+        </set>
+        where member_id = #{memberId,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="org.javaboy.vhr.model.Member">
+    update members
+    set member_num = #{memberNum,jdbcType=VARCHAR},
+      type_id = #{typeId,jdbcType=INTEGER},
+      custom_id = #{customId,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=VARCHAR},
+      is_logout = #{isLogout,jdbcType=INTEGER},
+      balance = #{balance,jdbcType=DOUBLE}
+    where member_id = #{memberId,jdbcType=INTEGER}
+  </update>
+    <update id="update">
+        update  members set is_logout = #{isLogout} where member_id = #{id}
+    </update>
+    <!--修改余额-->
+    <update id="updateBalance">
+         update  members set balance = #{balance}  where member_id= #{memberId}
+    </update>
+    <update id="updateType">
+        update  members set type_id= #{typeId}  where member_id= #{memberId}
+    </update>
+
+
+</mapper>

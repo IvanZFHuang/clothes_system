@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.javaboy.vhr.mapper.MemberTypeMapper">
+    <resultMap id="BaseResultMap" type="org.javaboy.vhr.model.MemberType">
+        <id column="type_id" property="typeId" jdbcType="INTEGER"/>
+        <result column="type_name" property="typeName" jdbcType="VARCHAR"/>
+        <result column="recharge_acount" property="rechargeAcount" jdbcType="DOUBLE"/>
+        <result column="discount" property="discount" jdbcType="VARCHAR"/>
+        <result column="remark" property="remark" jdbcType="VARCHAR"/>
+        <result column="total" property="total" jdbcType="VARCHAR"/>
+        <result column="conditions" property="conditions" jdbcType="VARCHAR"/>
+        <result column="total_money" property="totalMoney" jdbcType="DOUBLE"/>
+
+    </resultMap>
+    <sql id="Base_Column_List">
+    type_id, type_name, recharge_acount, discount, remark, total, conditions,total_money
+  </sql>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List"/>
+        from member_type
+        where type_id = #{typeId,jdbcType=INTEGER}
+    </select>
+    <select id="listMemberType" resultType="org.javaboy.vhr.model.MemberType">
+        select
+        <include refid="Base_Column_List"/>
+        from member_type
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from member_type
+    where type_id = #{typeId,jdbcType=INTEGER}
+  </delete>
+    <insert id="insert" parameterType="org.javaboy.vhr.model.MemberType">
+    insert into member_type (type_id, type_name, recharge_acount, 
+      discount, remark, total,
+      conditions,total_money)
+    values (#{typeId,jdbcType=INTEGER}, #{typeName,jdbcType=VARCHAR}, #{rechargeAcount,jdbcType=DOUBLE}, 
+      #{discount,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, #{total,jdbcType=VARCHAR}, 
+      #{conditions,jdbcType=VARCHAR},#{totalMoney,jdbcType=DOUBLE})
+  </insert>
+    <insert id="insertSelective" parameterType="org.javaboy.vhr.model.MemberType">
+        insert into member_type
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="typeId != null">
+                type_id,
+            </if>
+            <if test="typeName != null">
+                type_name,
+            </if>
+            <if test="rechargeAcount != null">
+                recharge_acount,
+            </if>
+            <if test="discount != null">
+                discount,
+            </if>
+            <if test="remark != null">
+                remark,
+            </if>
+            <if test="total != null">
+                total,
+            </if>
+            <if test="conditions != null">
+                conditions,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="typeId != null">
+                #{typeId,jdbcType=INTEGER},
+            </if>
+            <if test="typeName != null">
+                #{typeName,jdbcType=VARCHAR},
+            </if>
+            <if test="rechargeAcount != null">
+                #{rechargeAcount,jdbcType=DOUBLE},
+            </if>
+            <if test="discount != null">
+                #{discount,jdbcType=VARCHAR},
+            </if>
+            <if test="remark != null">
+                #{remark,jdbcType=VARCHAR},
+            </if>
+            <if test="total != null">
+                #{total,jdbcType=VARCHAR},
+            </if>
+            <if test="conditions != null">
+                #{conditions,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="org.javaboy.vhr.model.MemberType">
+        update member_type
+        <set>
+            <if test="typeName != null">
+                type_name = #{typeName,jdbcType=VARCHAR},
+            </if>
+            <if test="rechargeAcount != null">
+                recharge_acount = #{rechargeAcount,jdbcType=DOUBLE},
+            </if>
+            <if test="discount != null">
+                discount = #{discount,jdbcType=VARCHAR},
+            </if>
+            <if test="remark != null">
+                remark = #{remark,jdbcType=VARCHAR},
+            </if>
+            <if test="total != null">
+                total = #{total,jdbcType=VARCHAR},
+            </if>
+            <if test="condition != null">
+                conditions = #{conditions,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where type_id = #{typeId,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="org.javaboy.vhr.model.MemberType">
+    update member_type
+    set type_name = #{typeName,jdbcType=VARCHAR},
+      recharge_acount = #{rechargeAcount,jdbcType=DOUBLE},
+      discount = #{discount,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR},
+      total = #{total,jdbcType=VARCHAR},
+      conditions = #{conditions,jdbcType=VARCHAR}
+    where type_id = #{typeId,jdbcType=INTEGER}
+  </update>
+</mapper>

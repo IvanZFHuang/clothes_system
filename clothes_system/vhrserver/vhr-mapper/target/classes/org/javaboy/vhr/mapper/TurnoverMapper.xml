@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.javaboy.vhr.mapper.TurnoverMapper">
+    <resultMap id="BaseResultMap" type="org.javaboy.vhr.model.Turnover">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="currdate" property="currdate" jdbcType="VARCHAR"/>
+        <result column="count" property="count" jdbcType="INTEGER"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, currdate, count
+  </sql>
+
+    <select id="listTurnover" resultType="org.javaboy.vhr.model.Turnover">
+        select
+        <include refid="Base_Column_List"/>
+        from turnover
+        <where>
+            <if test="id != null and  id != ''">
+                user_id = #{id}
+            </if>
+        </where>
+    </select>
+
+</mapper>

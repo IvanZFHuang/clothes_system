@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.javaboy.vhr.mapper.RefoundCountMapper">
+    <resultMap id="BaseResultMap" type="org.javaboy.vhr.model.RefoundCount">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="curdate" property="curdate" jdbcType="VARCHAR"/>
+        <result column="count" property="count" jdbcType="INTEGER"/>
+        <result column="user_id" property="userId" jdbcType="INTEGER"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, curdate, count, user_id
+  </sql>
+
+    <select id="listCount" resultType="org.javaboy.vhr.model.RefoundCount">
+        select
+        <include refid="Base_Column_List"/>
+        from refound_count
+        where user_id = #{id,jdbcType=INTEGER} order by id DESC limit 4
+    </select>
+
+</mapper>

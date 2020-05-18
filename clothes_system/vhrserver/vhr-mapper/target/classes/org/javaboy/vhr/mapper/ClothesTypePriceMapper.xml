@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.javaboy.vhr.mapper.ClothesTypePriceMapper">
+    <resultMap id="BaseResultMap" type="org.javaboy.vhr.model.ClothesTypePrice">
+        <id column="type_id" property="typeId" jdbcType="INTEGER"/>
+        <result column="type_name" property="typeName" jdbcType="VARCHAR"/>
+        <result column="type_price" property="typePrice" jdbcType="INTEGER"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    type_id, type_name, type_price
+  </sql>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List"/>
+        from clothes_type_price
+        where type_id = #{typeId,jdbcType=INTEGER}
+    </select>
+    <!--获取所有的衣服类型-->
+    <select id="listClothesTypePrice" resultType="org.javaboy.vhr.model.ClothesTypePrice">
+        select
+        <include refid="Base_Column_List"/>
+        from clothes_type_price
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from clothes_type_price
+    where type_id = #{typeId,jdbcType=INTEGER}
+  </delete>
+    <insert id="insert" parameterType="org.javaboy.vhr.model.ClothesTypePrice">
+    insert into clothes_type_price (type_id, type_name, type_price
+      )
+    values (#{typeId,jdbcType=INTEGER}, #{typeName,jdbcType=VARCHAR}, #{typePrice,jdbcType=INTEGER}
+      )
+  </insert>
+    <insert id="insertSelective" parameterType="org.javaboy.vhr.model.ClothesTypePrice">
+        insert into clothes_type_price
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="typeId != null">
+                type_id,
+            </if>
+            <if test="typeName != null">
+                type_name,
+            </if>
+            <if test="typePrice != null">
+                type_price,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="typeId != null">
+                #{typeId,jdbcType=INTEGER},
+            </if>
+            <if test="typeName != null">
+                #{typeName,jdbcType=VARCHAR},
+            </if>
+            <if test="typePrice != null">
+                #{typePrice,jdbcType=INTEGER},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="org.javaboy.vhr.model.ClothesTypePrice">
+        update clothes_type_price
+        <set>
+            <if test="typeName != null">
+                type_name = #{typeName,jdbcType=VARCHAR},
+            </if>
+            <if test="typePrice != null">
+                type_price = #{typePrice,jdbcType=INTEGER},
+            </if>
+        </set>
+        where type_id = #{typeId,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="org.javaboy.vhr.model.ClothesTypePrice">
+    update clothes_type_price
+    set type_name = #{typeName,jdbcType=VARCHAR},
+      type_price = #{typePrice,jdbcType=INTEGER}
+    where type_id = #{typeId,jdbcType=INTEGER}
+  </update>
+</mapper>

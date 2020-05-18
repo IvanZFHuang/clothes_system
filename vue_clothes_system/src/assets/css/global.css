@@ -1,0 +1,33 @@
+html,
+body,
+#app,
+.el-container {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    min-width: 1366px;
+    text-align: left;
+}
+
+.el-card {
+    width: 100%;
+    margin-top: 20px;
+
+}
+
+.el-table {
+    align-items: center;
+}
+
+/* 设置el-cascader 弹框的高度，这个设置只有在全局中设置样式才生效 */
+.el-cascader-panel {
+    height: 200px;
+}
+
+body .el-table th.gutter{
+    display: table-cell!important;
+}
+ 
+body .el-table colgroup.gutter{
+    display: table-cell!important;
+}

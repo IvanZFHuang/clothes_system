@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.javaboy.vhr.mapper.TopupMapper">
+    <resultMap id="BaseResultMap" type="org.javaboy.vhr.model.Topup">
+        <id column="topup_id" property="topupId" jdbcType="INTEGER"/>
+        <result column="topup_time" property="topupTime" jdbcType="VARCHAR"/>
+        <result column="topup_money" property="topupMoney" jdbcType="DOUBLE"/>
+        <result column="cus_id" property="cusId" jdbcType="INTEGER"/>
+        <result column="member_id" property="memberId" jdbcType="INTEGER"/>
+        <association property="customer" javaType="org.javaboy.vhr.model.Customer">
+            <result column="cus_name" property="cusName" jdbcType="VARCHAR"/>
+            <result column="cus_email" property="cusEmail" jdbcType="VARCHAR"/>
+            <result column="cus_address" property="cusAddress" jdbcType="VARCHAR"/>
+            <result column="cus_phone" property="cusPhone" jdbcType="VARCHAR"/>
+        </association>
+        <association property="member" javaType="org.javaboy.vhr.model.Member">
+            <result column="balance" property="balance" jdbcType="DOUBLE"/>
+        </association>
+    </resultMap>
+    <sql id="Base_Column_List">
+    topup_id, topup_time, topup_money, cus_id, member_id
+  </sql>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List"/>
+        from topup
+        where topup_id = #{topupId,jdbcType=INTEGER}
+    </select>
+    <select id="listTopUp" resultMap="BaseResultMap">
+        select mem.member_num, cus.cus_name, cus.cus_email,cus.cus_phone,
+        t.topup_id, t.topup_time, t.topup_money from topup t join
+        members mem on mem.member_id = t.member_id join customer cus on t.cus_id = cus.cus_id
+        <where>
+            <if test="info !=null and info != ''">
+                <bind name="info" value="'%'+info+'%'"/>
+                mem.member_num like #{info} or cus.cus_name like #{info} or cus.cus_phone like #{info}
+            </if>
+            <if test="id != null and id != ''">
+                t.user_id = #{id}
+            </if>
+        </where>
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from topup
+    where topup_id = #{topupId,jdbcType=INTEGER}
+  </delete>
+    <insert id="insert" parameterType="org.javaboy.vhr.model.Topup">
+    insert into topup (topup_id, topup_time, topup_money, 
+      cus_id, member_id)
+    values (#{topupId,jdbcType=INTEGER}, #{topupTime,jdbcType=VARCHAR}, #{topupMoney,jdbcType=DOUBLE}, 
+      #{cusId,jdbcType=INTEGER}, #{memberId,jdbcType=INTEGER})
+  </insert>
+    <insert id="insertSelective" parameterType="org.javaboy.vhr.model.Topup">
+        insert into topup
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="topupId != null">
+                topup_id,
+            </if>
+            <if test="topupTime != null">
+                topup_time,
+            </if>
+            <if test="topupMoney != null">
+                topup_money,
+            </if>
+            <if test="cusId != null">
+                cus_id,
+            </if>
+            <if test="memberId != null">
+                member_id,
+            </if>
+            <if test="userId != null">
+                user_id,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="topupId != null">
+                #{topupId,jdbcType=INTEGER},
+            </if>
+            <if test="topupTime != null">
+                #{topupTime,jdbcType=VARCHAR},
+            </if>
+            <if test="topupMoney != null">
+                #{topupMoney,jdbcType=DOUBLE},
+            </if>
+            <if test="cusId != null">
+                #{cusId,jdbcType=INTEGER},
+            </if>
+            <if test="memberId != null">
+                #{memberId,jdbcType=INTEGER},
+            </if>
+            <if test="userId != null">
+                #{userId,jdbcType=INTEGER},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="org.javaboy.vhr.model.Topup">
+        update topup
+        <set>
+            <if test="topupTime != null">
+                topup_time = #{topupTime,jdbcType=VARCHAR},
+            </if>
+            <if test="topupMoney != null">
+                topup_money = #{topupMoney,jdbcType=DOUBLE},
+            </if>
+            <if test="cusId != null">
+                cus_id = #{cusId,jdbcType=INTEGER},
+            </if>
+            <if test="memberId != null">
+                member_id = #{memberId,jdbcType=INTEGER},
+            </if>
+        </set>
+        where topup_id = #{topupId,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="org.javaboy.vhr.model.Topup">
+    update topup
+    set topup_time = #{topupTime,jdbcType=VARCHAR},
+      topup_money = #{topupMoney,jdbcType=DOUBLE},
+      cus_id = #{cusId,jdbcType=INTEGER},
+      member_id = #{memberId,jdbcType=INTEGER}
+    where topup_id = #{topupId,jdbcType=INTEGER}
+  </update>
+</mapper>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.javaboy.vhr.mapper.CustomerMapper">
+    <resultMap id="BaseResultMap" type="org.javaboy.vhr.model.Customer">
+        <id column="cus_id" property="cusId" jdbcType="INTEGER"/>
+        <result column="cus_name" property="cusName" jdbcType="VARCHAR"/>
+        <result column="cus_email" property="cusEmail" jdbcType="VARCHAR"/>
+        <result column="cus_address" property="cusAddress" jdbcType="VARCHAR"/>
+        <result column="cus_phone" property="cusPhone" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    cus_id, cus_name, cus_email, cus_address, cus_phone
+  </sql>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List"/>
+        from customer
+        where cus_id = #{cusId,jdbcType=INTEGER}
+    </select>
+    <!--根据手机号查询是否已经注册过-->
+    <select id="getCountByPhone" resultType="java.lang.Integer">
+      select count(0) from customer where cus_phone = #{phone}
+    </select>
+    <select id="selectByPhone" resultType="java.lang.Integer">
+        select cus_id  from customer where cus_phone = #{cusPhone}
+    </select>
+    <!--查询所有的顾客信息-->
+    <select id="listCustomer" resultType="org.javaboy.vhr.model.Customer">
+        select
+        <include refid="Base_Column_List"/>
+        from customer
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from customer
+    where cus_id = #{cusId,jdbcType=INTEGER}
+  </delete>
+    <insert id="insert" parameterType="org.javaboy.vhr.model.Customer">
+    insert into customer (cus_id, cus_name, cus_email, 
+      cus_address, cus_phone)
+    values (#{cusId,jdbcType=INTEGER}, #{cusName,jdbcType=VARCHAR}, #{cusEmail,jdbcType=VARCHAR}, 
+      #{cusAddress,jdbcType=VARCHAR}, #{cusPhone,jdbcType=VARCHAR})
+  </insert>
+    <insert id="insertSelective" parameterType="org.javaboy.vhr.model.Customer"
+            useGeneratedKeys="true" keyProperty="cusId">
+        insert into customer
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="cusId != null">
+                cus_id,
+            </if>
+            <if test="cusName != null">
+                cus_name,
+            </if>
+            <if test="cusEmail != null">
+                cus_email,
+            </if>
+            <if test="cusAddress != null">
+                cus_address,
+            </if>
+            <if test="cusPhone != null">
+                cus_phone
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="cusId != null">
+                #{cusId,jdbcType=INTEGER},
+            </if>
+            <if test="cusName != null">
+                #{cusName,jdbcType=VARCHAR},
+            </if>
+            <if test="cusEmail != null">
+                #{cusEmail,jdbcType=VARCHAR},
+            </if>
+            <if test="cusAddress != null">
+                #{cusAddress,jdbcType=VARCHAR},
+            </if>
+            <if test="cusPhone != null">
+                #{cusPhone,jdbcType=VARCHAR}
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="org.javaboy.vhr.model.Customer">
+        update customer
+        <set>
+            <if test="cusName != null">
+                cus_name = #{cusName,jdbcType=VARCHAR},
+            </if>
+            <if test="cusEmail != null">
+                cus_email = #{cusEmail,jdbcType=VARCHAR},
+            </if>
+            <if test="cusAddress != null">
+                cus_address = #{cusAddress,jdbcType=VARCHAR},
+            </if>
+            <if test="cusPhone != null">
+                cus_phone = #{cusPhone,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where cus_id = #{cusId,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="org.javaboy.vhr.model.Customer">
+    update customer
+    set cus_name = #{cusName,jdbcType=VARCHAR},
+      cus_email = #{cusEmail,jdbcType=VARCHAR},
+      cus_address = #{cusAddress,jdbcType=VARCHAR},
+      cus_phone = #{cusPhone,jdbcType=VARCHAR}
+    where cus_id = #{cusId,jdbcType=INTEGER}
+  </update>
+</mapper>

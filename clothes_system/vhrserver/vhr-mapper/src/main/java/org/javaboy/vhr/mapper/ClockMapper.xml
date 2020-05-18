@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.javaboy.vhr.mapper.ClockMapper">
+    <resultMap id="BaseResultMap" type="org.javaboy.vhr.model.Clock">
+
+        <id column="clock_id" property="clockId" jdbcType="INTEGER"/>
+        <result column="emp_workID" property="empWorkID" jdbcType="VARCHAR"/>
+        <result column="clock_date" property="clockDate" jdbcType="VARCHAR"/>
+        <result column="endClock_date" property="endClockDate" jdbcType="VARCHAR"/>
+        <result column="start_work" property="startWork" jdbcType="INTEGER"/>
+        <result column="end_work" property="endWork" jdbcType="INTEGER"/>
+        <result column="is_leave" property="isLeave" jdbcType="INTEGER"/>
+        <result column="remark" property="remark" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        clock_id, emp_workID, clock_date, start_work, end_work,endClock_date,is_leave,remark
+    </sql>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List"/>
+        from clock
+        where clock_id = #{clockId,jdbcType=INTEGER}
+    </select>
+    <select id="selectClock" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from clock where emp_workID= #{empWorkID} and
+        <bind name="clockDate" value="'%'+clockDate+'%'"/>
+        clock_date like #{clockDate}
+    </select>
+    <!--查询信息-->
+    <select id="listClock" resultType="org.javaboy.vhr.model.Clock">
+        select c.clock_id, c.emp_workID, c.clock_date, c.start_work,
+        c.end_work,c.endClock_date,c.is_leave,c.remark,emp.name from clock c join employee emp
+        on c.emp_workID = emp.workID
+        <where>
+            <if test="name!=null and name!=''">
+                <bind name="name" value="'%'+name+'%'"/>
+                emp.name like #{name} or c.emp_workID like #{name}
+            </if>
+            <if test="date!=null and date!=''">
+                and
+                <bind name="date" value="'%'+date+'%'"/>
+                endClock_date like #{date} or clock_date like #{date}
+            </if>
+
+        </where>
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+        delete from clock
+        where clock_id = #{clockId,jdbcType=INTEGER}
+    </delete>
+    <insert id="insert" parameterType="org.javaboy.vhr.model.Clock">
+        insert into clock (clock_id, emp_workID, clock_date,
+        start_work, end_work,endClock_date)
+        values (#{clockId,jdbcType=INTEGER}, #{empWorkID,jdbcType=VARCHAR}, #{clockDate,jdbcType=VARCHAR},
+        #{startWork,jdbcType=INTEGER}, #{endWork,jdbcType=INTEGER},#{endClockDate,jdbcType=VARCHAR})
+    </insert>
+    <insert id="insertSelective" parameterType="org.javaboy.vhr.model.Clock">
+        insert into clock
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="clockId != null">
+                clock_id,
+            </if>
+            <if test="empWorkID != null">
+                emp_workID,
+            </if>
+            <if test="clockDate != null">
+                clock_date,
+            </if>
+            <if test="startWork != null">
+                start_work,
+            </if>
+            <if test="endWork != null">
+                end_work,
+            </if>
+            <if test="endClockDate != null">
+                endClock_date,
+            </if>
+            <if test="remark != null">
+                remark,
+            </if>
+            <if test="isLeave != null">
+                is_leave,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="clockId != null">
+                #{clockId,jdbcType=INTEGER},
+            </if>
+            <if test="empWorkID != null">
+                #{empWorkID,jdbcType=VARCHAR},
+            </if>
+            <if test="clockDate != null">
+                #{clockDate,jdbcType=VARCHAR},
+            </if>
+            <if test="startWork != null">
+                #{startWork,jdbcType=INTEGER},
+            </if>
+            <if test="endWork != null">
+                #{endWork,jdbcType=INTEGER},
+            </if>
+            <if test="endClockDate != null">
+                #{endClockDate,jdbcType=VARCHAR},
+            </if>
+            <if test="remark != null">
+                #{remark,jdbcType=VARCHAR},
+            </if>
+            <if test="isLeave != null">
+                #{isLeave,jdbcType=INTEGER},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="org.javaboy.vhr.model.Clock">
+        update clock
+        <set>
+            <if test="empWorkID != null">
+                emp_workID = #{empWorkID,jdbcType=VARCHAR},
+            </if>
+            <if test="clockDate != null">
+                clock_date = #{clockDate,jdbcType=VARCHAR},
+            </if>
+            <if test="startWork != null">
+                start_work = #{startWork,jdbcType=INTEGER},
+            </if>
+            <if test="endWork != null">
+                end_work = #{endWork,jdbcType=INTEGER},
+            </if>
+            <if test="endClockDate != null">
+                endClock_date = #{endClockDate,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where clock_id = #{clockId,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="org.javaboy.vhr.model.Clock">
+        update clock
+        set emp_workID = #{empWorkID,jdbcType=VARCHAR},
+        clock_date = #{clockDate,jdbcType=VARCHAR},
+        start_work = #{startWork,jdbcType=INTEGER},
+        end_work = #{endWork,jdbcType=INTEGER},
+        endClock_date = #{endClockDate,jdbcType=VARCHAR}
+        where clock_id = #{clockId,jdbcType=INTEGER}
+    </update>
+    <!--打卡下班-->
+    <update id="updateClock">
+        update clock set end_work = 1,endClock_date = #{endDate} where emp_workID = #{empWorkid,jdbcType=VARCHAR} and
+        <bind name="clockDate" value="'%'+clockDate+'%'"/>
+        clock_date like #{clockDate}
+    </update>
+</mapper>

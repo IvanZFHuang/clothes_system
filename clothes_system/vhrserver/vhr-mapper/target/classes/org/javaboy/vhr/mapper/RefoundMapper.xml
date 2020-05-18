@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.javaboy.vhr.mapper.RefoundMapper">
+    <resultMap id="BaseResultMap" type="org.javaboy.vhr.model.Refound">
+        <id column="refound_id" jdbcType="INTEGER" property="refoundId"/>
+        <result column="reason" jdbcType="VARCHAR" property="reason"/>
+        <result column="clothes_id" jdbcType="INTEGER" property="clothesId"/>
+        <result column="time" jdbcType="VARCHAR" property="time"/>
+        <result column="refound_amount" jdbcType="DOUBLE" property="refoundAmount"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    refound_id, reason, clothes_id, time, refound_amount
+  </sql>
+    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from refound
+        where refound_id = #{refoundId,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from refound
+    where refound_id = #{refoundId,jdbcType=INTEGER}
+  </delete>
+    <insert id="insert" parameterType="org.javaboy.vhr.model.Refound">
+    insert into refound (refound_id, reason, clothes_id, 
+      time, refound_amount)
+    values (#{refoundId,jdbcType=INTEGER}, #{reason,jdbcType=VARCHAR}, #{clothesId,jdbcType=INTEGER}, 
+      #{time,jdbcType=VARCHAR}, #{refoundAmount,jdbcType=DOUBLE})
+  </insert>
+    <insert id="insertSelective" parameterType="org.javaboy.vhr.model.Refound">
+        insert into refound
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="refoundId != null">
+                refound_id,
+            </if>
+            <if test="reason != null">
+                reason,
+            </if>
+            <if test="clothesId != null">
+                clothes_id,
+            </if>
+            <if test="time != null">
+                time,
+            </if>
+            <if test="refoundAmount != null">
+                refound_amount,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="refoundId != null">
+                #{refoundId,jdbcType=INTEGER},
+            </if>
+            <if test="reason != null">
+                #{reason,jdbcType=VARCHAR},
+            </if>
+            <if test="clothesId != null">
+                #{clothesId,jdbcType=INTEGER},
+            </if>
+            <if test="time != null">
+                #{time,jdbcType=VARCHAR},
+            </if>
+            <if test="refoundAmount != null">
+                #{refoundAmount,jdbcType=DOUBLE},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="org.javaboy.vhr.model.Refound">
+        update refound
+        <set>
+            <if test="reason != null">
+                reason = #{reason,jdbcType=VARCHAR},
+            </if>
+            <if test="clothesId != null">
+                clothes_id = #{clothesId,jdbcType=INTEGER},
+            </if>
+            <if test="time != null">
+                time = #{time,jdbcType=VARCHAR},
+            </if>
+            <if test="refoundAmount != null">
+                refound_amount = #{refoundAmount,jdbcType=DOUBLE},
+            </if>
+        </set>
+        where refound_id = #{refoundId,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="org.javaboy.vhr.model.Refound">
+    update refound
+    set reason = #{reason,jdbcType=VARCHAR},
+      clothes_id = #{clothesId,jdbcType=INTEGER},
+      time = #{time,jdbcType=VARCHAR},
+      refound_amount = #{refoundAmount,jdbcType=DOUBLE}
+    where refound_id = #{refoundId,jdbcType=INTEGER}
+  </update>
+</mapper>

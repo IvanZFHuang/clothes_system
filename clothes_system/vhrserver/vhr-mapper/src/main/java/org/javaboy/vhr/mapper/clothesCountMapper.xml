@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.javaboy.vhr.mapper.clothesCountMapper">
+    <resultMap id="BaseResultMap" type="org.javaboy.vhr.model.cloCount">
+        <result column="datetime" property="dateTime" jdbcType="VARCHAR"/>
+        <result column="clothcount" property="clothCount" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        datetime, clothcount
+    </sql>
+    <select id="listClothes" resultMap="BaseResultMap">
+        select
+        a.datetime,a.clothcount
+        from clocount a
+        <where>
+            <if test="id != null and  id != ''">
+                user_id = #{id}
+            </if>
+        </where>
+    </select>
+
+    <select id="listClothe" resultMap="BaseResultMap">
+        select
+        a.datetime,a.clothcount
+        from clocount a
+        <where>
+            <if test="id != null and  id != ''">
+                user_id = #{id}
+            </if>
+        </where>
+        order by datetime DESC limit 4
+    </select>
+</mapper>

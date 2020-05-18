@@ -1,0 +1,52 @@
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/vhr?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    rabbitmq:
+      username: guest
+      password: guest
+      host: 127.0.0.1
+      publisher-confirms: true
+      publisher-returns: true
+      driver-class-name: com.mysql.cj.jdbc.Driver
+  redis:
+    host: 127.0.0.1
+    database: 0
+    port: 6379
+    password: msunportal123
+  cache:
+    cache-names: menus_cache
+  mail:
+    port: 465
+    host: smtp.qq.com
+    username: jiangheng0223@qq.com
+    password: hjrmxrehkmtugggb
+    default-encoding: UTF-8
+    properties:
+      mail:
+        smtp:
+          auth: true
+          socketFactory:
+            port: 465
+            class: javax.net.ssl.SSLSocketFactory
+            fallback: false
+          starttls:
+            enable: true
+            required: true
+
+server:
+  port: 8081
+  compression:
+    enabled: true
+logging:
+  level:
+    org.javaboy.vhr.mapper: debug
+    #fastdfs:
+    #nginx:
+    #host: http://192.168.91.128/
+#开启驼峰配置
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
